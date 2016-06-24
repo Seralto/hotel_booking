@@ -1,0 +1,13 @@
+<div class="well">
+  <h1 class="text-center">Helcome to Conichi</h1>
+  <%= form_tag hotels_path, method: 'get' do %>
+    <div class="">
+      <div class="form-group col-md-6">
+        <%= text_field_tag :address, nil, {class: 'form-control', placeholder: 'Enter the location...'} %>
+      </div>
+      <div class="form-group">
+        <button class="btn btn-default" type="submit">Search Hotel</button>
+      </div>
+    </div>
+  <% end %>
+</div>
