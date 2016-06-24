@@ -26,5 +26,13 @@ module HotelBooking
     # Auto-load API and its subdirectories
     config.paths.add File.join('app', 'api'), glob: File.join('**', '*.rb')
     config.autoload_paths += Dir[Rails.root.join('app', 'api', '*')]
+
+    # Generators
+    config.generators do |g|
+      g.test_framework :rspec
+      g.helper false
+      g.view_specs false
+      g.routing_specs false
+    end
   end
 end
