@@ -25,3 +25,5 @@ end
 # API
 gem 'grape'
 
+# Styles
+gem 'bootstrap-sass', '~> 3.3.6'
