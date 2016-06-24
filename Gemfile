@@ -27,3 +27,6 @@ gem 'grape'
 
 # Styles
 gem 'bootstrap-sass', '~> 3.3.6'
+
+# Location
+gem 'geocomplete_rails'

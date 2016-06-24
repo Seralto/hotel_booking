@@ -1,13 +1,18 @@
-<div class="well">
+<div class="well col-lg-12 text-center">
   <h1 class="text-center">Helcome to Conichi</h1>
-  <%= form_tag hotels_path, method: 'get' do %>
-    <div class="">
-      <div class="form-group col-md-6">
-        <%= text_field_tag :address, nil, {class: 'form-control', placeholder: 'Enter the location...'} %>
-      </div>
-      <div class="form-group">
-        <button class="btn btn-default" type="submit">Search Hotel</button>
-      </div>
+  <%= form_tag hotels_path, id: 'address-form', method: 'get' do %>
+    <%= hidden_field_tag :lat %>
+    <%= hidden_field_tag :lng %>
+    <div class="row">
+    <div class="form-group col-lg-6">
+      <%= text_field_tag :address, nil, {class: 'form-control', placeholder: 'Enter the location...'} %>
+    </div>
+    <div class="form-group col-lg-6">
+      <%= text_field_tag :distance, nil, {class: 'form-control', placeholder: 'Enter the distance in meters...'} %>
+    </div>
+    <div class="form-group col-lg-12">
+      <button class="btn btn-lg btn-primary col-lg-12" type="submit">Search Hotel</button>
+    </div>
     </div>
   <% end %>
 </div>
