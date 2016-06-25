@@ -1,9 +1,12 @@
 <% @hotels.each do |hotel| %>
-  <%= form_for bookings_path do %>
-    <%= hidden_field_tag :place_id, hotel.place_id %>
-    <%= hidden_field_tag :city, city_from_place(hotel.vicinity) %>
-    <h3><%= hotel.name %></h3>
-    <p><%= hotel.vicinity %></p>
-    <button class="btn btn-sm btn-success" type="submit">Book</button>
-  <% end %>
+  <div class="hotel-box">
+    <%= form_for :bookings, url: bookings_path do %>
+      <%= hidden_field_tag :place_id, hotel.place_id %>
+      <%= hidden_field_tag :hotel, hotel.name %>
+      <%= hidden_field_tag :city, city_from_place(hotel.vicinity) %>
+      <h3><%= hotel.name %></h3>
+      <p><%= hotel.vicinity %></p>
+      <button class="btn btn-sm btn-success" type="submit">Book</button>
+    <% end %>
+  </div>
 <% end %>
