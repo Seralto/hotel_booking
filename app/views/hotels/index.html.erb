@@ -1,6 +1,7 @@
 <% @hotels.each do |hotel| %>
-  <%= form_for :teste do %>
+  <%= form_for bookings_path do %>
     <%= hidden_field_tag :place_id, hotel.place_id %>
+    <%= hidden_field_tag :city, city_from_place(hotel.vicinity) %>
     <h3><%= hotel.name %></h3>
     <p><%= hotel.vicinity %></p>
     <button class="btn btn-sm btn-success" type="submit">Book</button>
