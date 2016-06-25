@@ -16,7 +16,13 @@
         <li><%= link_to 'Home', root_path %></li>
       </ul>
 
-      <%= link_to 'Sair', nil, class: 'pull-right' %>
+      <div class="pull-right">
+        <% if user_signed_in? %>
+          Welcome <%= current_user.email %>
+        <% else %>
+          <%= link_to 'Login', nil, class: 'pull-right' %>
+       <% end %>
+      </div>
     </div>
   </div>
 </nav>
