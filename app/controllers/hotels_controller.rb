@@ -4,8 +4,12 @@ class HotelsController < ApplicationController
   def index
     latitude = params[:lat]
     longitude = params[:lng]
-    distance = params[:distance]
+    distance = params[:distance].blank? ? default_distance : params[:distance]
 
-    render json: hotels(latitude, longitude, distance)
+    @hotels = hotels(latitude, longitude, distance)
+  end
+
+  def default_distance
+    2000
   end
 end

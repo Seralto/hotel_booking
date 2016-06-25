@@ -1,3 +1,5 @@
 $(function(){
-  $("#address").geocomplete({details:"form#address-form"});
+  $("#address").geocomplete({
+    details:"form#address-form"
+  });
 });
