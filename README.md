@@ -1,28 +1,40 @@
-== README
+# Hotel Booking System
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Versions:
+* Ruby 2.3.1
+* Rails 4.2.6
 
-Things you may want to cover:
+### Database
+* **Production:** PostgreSQL
+* **Development:** SQLite
 
-* Ruby version
+### Main Gems
+* Devise
+* Geocomplete
+* Google Places
+* Bootstrap
+* Date Picker
 
-* System dependencies
+### Description
+Hotel Booking System where the user can enter a location and find hotels near him.  
+The user can book any hotel choosing a checking date (one booking per day).
 
-* Configuration
+### API
+The APP provides a public API which gives the endpoints below:
+```
+http://hotel-booking-system.herokuapp.com/api/v1/bookings
+http://hotel-booking-system.herokuapp.com/api/v1/bookings/{user-id}
+```
 
-* Database creation
+### ENV vars
+In order to install the APP localy, create the following ENV var based on your Google APIs (https://console.developers.google.com/apis/library)
+```
+PLACES_KEY
+GOOGLE_API_KEY
+```
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+### Heroku
+The APP is hosted in Heroku: 
+```
+http://hotel-booking-system.herokuapp.com
+```
