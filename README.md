@@ -22,8 +22,8 @@ The user can book any hotel choosing a checking date (one booking per day).
 ### API
 The APP provides a public API which gives the endpoints below:
 ```
-http://hotel-booking-system.herokuapp.com/api/v1/bookings
-http://hotel-booking-system.herokuapp.com/api/v1/bookings/{user-id}
+/api/v1/bookings
+/api/v1/bookings/{user-id}
 ```
 
 ### ENV vars
@@ -34,7 +34,6 @@ GOOGLE_API_KEY
 ```
 
 ### Heroku
-The APP is hosted in Heroku: 
-```
+The APP is hosted in Heroku:
 http://hotel-booking-system.herokuapp.com
-```
+
