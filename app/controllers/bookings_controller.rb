@@ -12,7 +12,7 @@ class BookingsController < ApplicationController
       if @booking.save
         format.html { redirect_to bookings_path, notice: 'Hotel booked!' }
       else
-        format.html { redirect_to :back, notice: 'Sorry, an error occurs' }
+        format.html { redirect_to :back, alert: @booking.errors.full_messages }
       end
     end
   end
