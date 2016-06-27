@@ -16,4 +16,6 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require geocomplete
+//= require bootstrap-datepicker/core
+//= require bootstrap-datepicker/locales/bootstrap-datepicker.uk.js
 //= require_tree .

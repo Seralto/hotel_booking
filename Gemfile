@@ -35,3 +35,6 @@ gem 'google_places'
 
 # User authentication
 gem 'devise'
+
+# Datepicker
+gem 'bootstrap-datepicker-rails'
