@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
-  # mount API => '/'
 
   root 'home#index'
 
   resources :hotels
   resources :bookings
+
+  mount HotelBooking::V1 => '/'
 end
