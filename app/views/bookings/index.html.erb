@@ -18,7 +18,7 @@
           <td><%= booking.hotel %></td>
           <td><%= booking.city %></td>
           <td><%= booking.checkin.strftime('%b %d, %Y') %></td>
-          <td><%= link_to 'Remove', booking_path(booking), method: :delete, data: { confirm: 'Are you sure you want to remove this book?'}, class: 'btn btn-danger btn-xs' %></td>
+          <td><%= link_to 'Remove', booking_path(booking), method: :delete, data: { confirm: 'Are you sure you want to remove this book?' }, class: 'btn btn-danger btn-xs' %></td>
         </tr>
       <% end %>
     <% else %>

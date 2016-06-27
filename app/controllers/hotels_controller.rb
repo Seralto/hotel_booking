@@ -1,6 +1,8 @@
 class HotelsController < ApplicationController
   include Geolocator
 
+  before_action :verify_correct_address, only: :index
+
   def index
     latitude = params[:lat]
     longitude = params[:lng]
@@ -11,5 +13,9 @@ class HotelsController < ApplicationController
 
   def default_distance
     2000
+  end
+
+  def verify_correct_address
+    redirect_to root_path, alert: 'Sorry, no hotels found in your search.' if params[:lat].blank?
   end
 end
