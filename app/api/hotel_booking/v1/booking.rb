@@ -3,7 +3,7 @@ module HotelBooking
     resource :bookings do
       desc 'Return all bookings'
       get do
-        ::Booking.all
+        ::Booking.includes(:user).as_json(include: :user)
       end
 
       desc 'Return a booking'
@@ -11,7 +11,11 @@ module HotelBooking
         requires :id, type: String, desc: 'booking id'
       end
       get ':id' do
-        ::Booking.find(params[:id])
+        begin
+          ::Booking.where(user_id: params[:id])
+        rescue ActiveRecord::RecordNotFound
+          { status: 404, message: 'not found' }
+        end
       end
     end
   end
