@@ -1,6 +1,7 @@
 <div class="col-md-2"></div>
 <div class="well col-lg-8 seach-box">
   <h1 class="text-center">Helcome to Conichi</h1>
+  <h4 class="text-center">Please fill the location and maximum distance to see a list of hotels near you.</h4>
   <%= form_tag hotels_path, id: 'address-form', method: 'get' do %>
     <%= hidden_field_tag :lat %>
     <%= hidden_field_tag :lng %>

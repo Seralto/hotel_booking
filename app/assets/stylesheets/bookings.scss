@@ -1,4 +1,12 @@
-.bookings table.table thead tr th {
-  background: #337ab7;
-  color: #fff;
+.bookings {
+  table.table {
+    thead tr th {
+      background: #337ab7;
+      color: #fff;
+    }
+
+    tbody tr:hover {
+      background: #fffec9;
+    }
+  }
 }
