@@ -5,6 +5,6 @@ module Geolocator
   end
 
   def client
-    GooglePlaces::Client.new('AIzaSyCU-hoZG4tKQNcG4bObYitbbo30P8DskXg')
+    GooglePlaces::Client.new(ENV['API_KEY'])
   end
 end
