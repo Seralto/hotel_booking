@@ -9,6 +9,7 @@
 * **Development:** SQLite
 
 ### Main Gems
+* Grape
 * Devise
 * Geocomplete
 * Google Places
