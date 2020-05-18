@@ -34,7 +34,3 @@ PLACES_KEY
 GOOGLE_API_KEY
 ```
 
-### Heroku
-The APP is hosted in Heroku:
-http://hotel-booking-system.herokuapp.com
-
